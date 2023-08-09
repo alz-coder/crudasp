@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zR4gUpcGcS3XGcYiFfyLC23OrQe7fUzFgwQN103xlpMG9zsVgZ6ccouH8UqffzOeq1gqoA4S+9n0gTOdlyASGA==",
+  "dgSpecHash": "zCsKUzjO6fSkiLUMxrtby02Hk/UrY3XGkIR/ShzXld1RjOtVw7l2YV0+SGQEoBgJ6pCcKW0+yP2sMeD53ZU04A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexl\\source\\repos\\CRUDASP\\CRUDASP\\CRUDASP.csproj",
+  "projectFilePath": "C:\\Users\\alexl\\Source\\Repos\\alz-coder\\crudasp\\CRUDASP\\CRUDASP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexl\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\alexl\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

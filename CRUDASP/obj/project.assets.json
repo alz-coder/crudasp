@@ -3467,11 +3467,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexl\\source\\repos\\CRUDASP\\CRUDASP\\CRUDASP.csproj",
+      "projectUniqueName": "C:\\Users\\alexl\\Source\\Repos\\alz-coder\\crudasp\\CRUDASP\\CRUDASP.csproj",
       "projectName": "CRUDASP",
-      "projectPath": "C:\\Users\\alexl\\source\\repos\\CRUDASP\\CRUDASP\\CRUDASP.csproj",
+      "projectPath": "C:\\Users\\alexl\\Source\\Repos\\alz-coder\\crudasp\\CRUDASP\\CRUDASP.csproj",
       "packagesPath": "C:\\Users\\alexl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexl\\source\\repos\\CRUDASP\\CRUDASP\\obj\\",
+      "outputPath": "C:\\Users\\alexl\\Source\\Repos\\alz-coder\\crudasp\\CRUDASP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
