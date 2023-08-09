@@ -1,0 +1,56 @@
+﻿@model CRUDASP.Models.Contacto
+@{
+    ViewData["Title"] = "Detalle usuario";
+}
+
+<!--Modal detalles-->
+<div class="modal fade" id="ModalDetalles-@Model.ID" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-info">
+                <h5 class="modal-title text-white" id="exampleModalLabel">Detalles</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div>
+                   
+                    <dl class="row">
+                       
+                        <dt class="col-sm-5">
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Nombre)
+                        </dd>
+                        <dt class="col-sm-5">
+                            @Html.DisplayNameFor(model => model.Email)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Email)
+                        </dd>
+                        <dt class="col-sm-5">
+                            @Html.DisplayNameFor(model => model.Telefono)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Telefono)
+                        </dd>
+
+                        <dt class="col-sm-5">
+                            @Html.DisplayNameFor(model => model.FechaCreacion)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.FechaCreacion)
+                        </dd>
+                    </dl>
+                 
+                </div>
+                <div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+

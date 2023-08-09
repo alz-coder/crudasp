@@ -1,0 +1,46 @@
+﻿@model CRUDASP.Models.Contacto
+@{
+    ViewData["Title"] = "Crear usuario";
+}
+
+
+
+<div class="row">
+    <div class="offset-12">
+        <div class="card border">
+            <div class="card-header bg-success">
+                <h3 class="text-white">
+                    <strong>Nuevo Usuario</strong>
+                </h3>
+            </div>
+            <card_body>
+                <form asp-action="Crear" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Nombre" class="control-label"></label>
+                        <input asp-for="Nombre"  class="form-control" placeholder="Ingresa Nombre"/>
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Telefono" class="control-label"></label>
+                        <input asp-for="Telefono" class="form-control" placeholder="Ingresa Telefono" />
+                        <span asp-validation-for="Telefono" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" placeholder="Ingresa Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mt-3">
+                        <button type="submit" class="btn btn-success d-block mx-auto">
+                            <i class="bi bi-person-fill"></i> Crear Usuario
+                        </button>
+                    </div>
+                </form>
+                <a asp-controller="Inicio" asp-action="Index">Regresar</a>
+            </card_body>
+           
+        </div>
+    </div>
+
+</div>

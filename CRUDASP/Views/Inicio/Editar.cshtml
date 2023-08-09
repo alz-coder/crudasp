@@ -1,0 +1,66 @@
+﻿@model CRUDASP.Models.Contacto
+@{
+    ViewData["Title"] = "Editar usuario";
+}
+
+<!-- Modal Editar -->
+<div class="modal fade" id="ModalEditar-@Model.ID" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="offset-12">
+                        <div class="card ">
+                            <div class="card-header bg-warning">
+                                <h3 class="text-dark">
+                                    <strong>Editar  usuario</strong>
+                                </h3>
+                            </div>
+                            <card_body>
+                                <form asp-action="Editar" method="post">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+                                        
+                                        <input asp-for="ID" class="form-control" placeholder="ID" type="hidden" />
+                                        <span asp-validation-for="ID" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Nombre" class="control-label"></label>
+                                        <input asp-for="Nombre" class="form-control" placeholder="Ingresa Nombre" />
+                                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Telefono" class="control-label"></label>
+                                        <input asp-for="Telefono" class="form-control" placeholder="Ingresa Telefono" />
+                                        <span asp-validation-for="Telefono" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Email" class="control-label"></label>
+                                        <input asp-for="Email" class="form-control" placeholder="Ingresa Email" />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group mt-3 ">
+                                    
+                                        <button type="submit" class="btn btn-warning" d-block mx-auto"><i class="bi bi-person-fill"></i> Editar Usuario</button>
+                                      
+                                    </div> 
+                                   
+                                </form>
+
+                            </card_body>
+
+                        </div>
+                    </div>
+
+                </div>
+               
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
