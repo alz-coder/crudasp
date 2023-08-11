@@ -1,11 +1,12 @@
-﻿
-@model IEnumerable<CRUDASP.Models.Contacto>;
+﻿@model IEnumerable<CRUDASP.Models.Contacto>;
+
+@{
+    ViewData["Title"] = "Contactos";
+}
 
 
-
-
-<div class="row">
-    <div class="offset-12">
+<div class="row mt-4">
+    <div class="offset-15">
         <div class="card border">
             <div class="card-header bg-dark">
                 <h3 class="text-white"><strong><i class="bi bi-clipboard2"></i>  Contactos</strong></h3>
@@ -28,24 +29,24 @@
                                 @foreach (var item in Model)
                                 {
                                     <tr>
-                                         <td>
+                                        <td>
                                             <i class="bi bi-person-lines-fill"></i>
-                                         </td>
+                                        </td>
                                         <td>@Html.DisplayFor(m =>item.Nombre)</td>
                                         <td>@Html.DisplayFor(m =>item.Telefono)</td>
                                         <td>@Html.DisplayFor(m =>item.Email)</td>
 
-                                        <td >
+                                        <td>
                                             <button class="btn btn-warning text-white" data-bs-toggle="modal" data-bs-target="@("#ModalEditar-"+item.ID)" data-url="@Url.Action($"Editar/{item.ID}")"> <i class="bi bi-pencil-fill"></i> Editar</button>
                                             @await Html.PartialAsync("Editar",item)
-                                            <button class="btn btn-info text-white"  data-bs-toggle="modal" data-bs-target="@("#ModalDetalles-"+item.ID)" data-url="@Url.Action($"detalle/{item.ID}")"> <i class="bi bi-info-circle"></i> Detalle</button>
+                                            <button class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target="@("#ModalDetalles-"+item.ID)" data-url="@Url.Action($"detalle/{item.ID}")"> <i class="bi bi-info-circle"></i> Detalle</button>
                                             @await Html.PartialAsync("detalle",item)
                                             <button class="btn btn-danger text-white" data-bs-toggle="modal" data-bs-target="@("#ModalEliminar-"+item.ID)" data-url="@Url.Action($"Eliminar/{item.ID}")"> <i class="bi bi-eraser-fill"></i> Eliminar</button>
                                             @await Html.PartialAsync("Eliminar",item)
-                                            
+
                                         </td>
                                     </tr>
-                                   
+
                                 }
                             </tbody>
                         </table>
@@ -70,7 +71,7 @@
     </div>
 </div>
 
-  
+
 
 
 
@@ -78,30 +79,30 @@
 <!--paginacion-->
 @section Scripts{
     <script>
-            $(document).ready(function () {
-                //Llamar a datatable
-                $('#tblUsuarios').DataTable({
-                    language: {
-                        "decimal": "",
-                        "emptyTable": "No hay información",
-                        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
-                        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
-                        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
-                        "infoPostFix": "",
-                        "thousands": ",",
-                        "lengthMenu": "Mostrar _MENU_ Entradas",
-                        "loadingRecords": "Cargando...",
-                        "processing": "Procesando...",
-                        "search": "Buscar:",
-                        "zeroRecords": "Sin resultados encontrados",
-                        "paginate": {
-                            "first": "Primero",
-                            "last": "Ultimo",
-                            "next": "Siguiente",
-                            "previous": "Anterior"
-                        }
+        $(document).ready(function () {
+            //Llamar a datatable
+            $('#tblUsuarios').DataTable({
+                language: {
+                    "decimal": "",
+                    "emptyTable": "No hay información",
+                    "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+                    "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                    "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                    "infoPostFix": "",
+                    "thousands": ",",
+                    "lengthMenu": "Mostrar _MENU_ Entradas",
+                    "loadingRecords": "Cargando...",
+                    "processing": "Procesando...",
+                    "search": "Buscar:",
+                    "zeroRecords": "Sin resultados encontrados",
+                    "paginate": {
+                        "first": "Primero",
+                        "last": "Ultimo",
+                        "next": "Siguiente",
+                        "previous": "Anterior"
                     }
-                });
+                }
             });
+        });
     </script>
 }

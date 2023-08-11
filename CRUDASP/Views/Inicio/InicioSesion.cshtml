@@ -2,8 +2,7 @@
     <div id="login" class="col-lg-4 offset-lg-4 col-md-6 offset-md-3
                     col-12">
         <h2 class="text-center">Bienvenido de nuevo</h2>
-        <img class="img-fluid mx-auto d-block rounded"
-             src="https://picsum.photos/id/870/300/200" />
+        <img class="img-fluid mx-auto d-block rounded" src="https://picsum.photos/id/870/300/200" />
 
         <form>
             <div class="form-group">
@@ -18,9 +17,9 @@
                        class="form-control" type="password"
                        placeholder="Contraseña">
             </div>
-            <button type="submit" class="btn btn-primary mb-2">
-                Entrar
-            </button>
+            <a asp-controller="ValUsuario" asp-action="ListaUsuarios" class="btn btn-success d-block mx-auto btn-lg">
+                <i class="bi bi-file-plus-fill"></i> Ingresar
+            </a>
             <br>
             <a href="#">Contraseña olvidada</a>
         </form>

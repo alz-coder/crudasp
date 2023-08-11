@@ -108,6 +108,13 @@ namespace CRUDASP.Controllers
             }
             return View();
         }
+        //metodo validar
+        [HttpGet]
+        public async Task<IActionResult> ValUsuario()
+        {
+            //utilizamos a Entity Framework
+            return RedirectToAction("ListaUsuarios");
+        }
 
         public IActionResult Privacy()
         {
