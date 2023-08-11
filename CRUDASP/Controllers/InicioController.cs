@@ -3,6 +3,7 @@ using CRUDASP.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 
 namespace CRUDASP.Controllers
 {
@@ -92,7 +93,21 @@ namespace CRUDASP.Controllers
             await _Contexto.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-      
+        //metodo crear usuario
+        [HttpPost]
+        public async Task<IActionResult> CrearUsuario(Usuario usuario)
+        {
+            //utilizamos a Entity Framework
+            // utilizamos a Entity Framework
+            if (ModelState.IsValid)
+            {
+                _Contexto.Usuarios.Add(usuario);
+                usuario.FechaCreacion = DateTime.Now;
+                await _Contexto.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View();
+        }
 
         public IActionResult Privacy()
         {
