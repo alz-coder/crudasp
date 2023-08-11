@@ -93,12 +93,20 @@ namespace CRUDASP.Controllers
             await _Contexto.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        
+      
         //metodo crear usuario
+        [HttpGet]
+        public async Task<IActionResult> CrearUsuario()
+        {
+            //utilizamos a Entity Framework
+            return View();
+        }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> CrearUsuario(Usuario usuario)
         {
             //utilizamos a Entity Framework
-            // utilizamos a Entity Framework
             if (ModelState.IsValid)
             {
                 _Contexto.Usuarios.Add(usuario);
@@ -107,14 +115,6 @@ namespace CRUDASP.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View();
-        }
-        //metodo iniciar sesion
-        //detalle
-        [HttpGet]
-        public IActionResult IniciarSesion()
-        {
-            
-            return PartialView("InicioSesion");
         }
 
 

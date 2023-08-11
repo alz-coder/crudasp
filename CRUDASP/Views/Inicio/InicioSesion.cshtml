@@ -3,8 +3,8 @@
 }
 
 
-<!-- Modal ELiminar-->
-<div class="modal fade" id="ModalEliminar-@Model.ID" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal Inicio sesion-->
+<div class="modal fade" id="IniciarSesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header bg-danger">
@@ -14,7 +14,31 @@
                 <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                
+                <div class="row">
+                    <div id="login" class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-12">
+                        <h2 class="text-center">Bienvenido de nuevo</h2>
+                        <img class="img-fluid mx-auto d-block rounded"
+                             src="https://picsum.photos/id/870/300/200" />
+
+                        <form>
+                            <div class="form-group">
+                                <label for="correo">Correo</label>
+                                <input id="correo" name="correo"
+                                       class="form-control" type="email"
+                                       placeholder="Correo electrónico">
+                            </div>
+                            <div class="form-group">
+                                <label for="palabraSecreta">Contraseña</label>
+                                <input id="palabraSecreta" name="palabraSecreta" class="form-control" type="password" placeholder="Contraseña">
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-2">
+                                Entrar
+                            </button>
+                            <br>
+                            <a href="#">Contraseña olvidada</a>
+                        </form>
+                    </div>
+                </div>
                
             </div>
 
