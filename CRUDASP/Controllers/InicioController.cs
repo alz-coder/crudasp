@@ -108,13 +108,15 @@ namespace CRUDASP.Controllers
             }
             return View();
         }
-        //metodo validar
+        //metodo iniciar sesion
+        //detalle
         [HttpGet]
-        public async Task<IActionResult> ValUsuario()
+        public IActionResult IniciarSesion()
         {
-            //utilizamos a Entity Framework
-            return RedirectToAction("ListaUsuarios");
+            
+            return PartialView("InicioSesion");
         }
+
 
         public IActionResult Privacy()
         {
